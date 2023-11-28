@@ -1,0 +1,38 @@
+*{
+    margin: 10px;
+}
+
+
+.nav{
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid black;
+}
+
+.nav-buttons{
+    display: flex;
+    list-style: none;
+    margin-right: 10px
+}
+
+.nav-buttons > li{
+    margin-right: 10px
+}
+
+.carding{
+    display: flex;
+}
+
+.card {
+    border: 1px solid black;
+    border-radius: 12px;
+    padding: 5px;
+    width: 12%;   
+    margin-right: 10px;
+}
+
+.card > img{
+    width: 88%;
+    height: auto;
+    margin: 0 auto;    
+}
