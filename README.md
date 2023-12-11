@@ -15,7 +15,7 @@
     2)Two types of Rendering
         i)Client side 
         ii)Server side
-    3) All the childern going to the Outlet that present in react-router-dom and that Outlet should 
+    3) All the childern going to the Outlet that present in react-router-dom and that #Outlet should 
         present  in Parent
     4)
 
