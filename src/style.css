@@ -21,18 +21,28 @@
 
 .carding{
     display: flex;
+    flex-wrap: wrap;
 }
 
 .card {
     border: 1px solid black;
     border-radius: 12px;
     padding: 5px;
-    width: 12%;   
+    width: 210px;
+    border-radius: 12px;   
     margin-right: 10px;
 }
 
 .card > img{
-    width: 88%;
-    height: auto;
-    margin: 0 auto;    
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    border-radius: 12px;      
+}
+
+.footer {
+    width:100%;
+    height:80px;
+    background: black;
+    color: antiquewhite;
 }

@@ -1,5 +1,4 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React,{useEffect} from 'react';
 
 const About = () => {
     return (

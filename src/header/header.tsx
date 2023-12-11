@@ -1,6 +1,6 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
 import  Logo from "../img/foodLogo.png";
+import {Link} from 'react-router-dom';
 
 export const Title = () => (
     <div style={{display: 'flex'}}> 
@@ -15,9 +15,15 @@ const Header = () => {
             <div className='nav'>
                 <Title/>
                 <ul className='nav-buttons'>
-                    <li>home</li>
-                    <li>about</li>
-                    <li>contact</li>                
+                    <li>
+                        <Link to='/'>home</Link>
+                    </li>
+                    <li>
+                        <Link to='/about'>about</Link>
+                    </li>
+                    <li>
+                        <Link to='/contact'>contact</Link>
+                    </li>                
                 </ul>
             </div>    
         </>

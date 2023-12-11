@@ -3,10 +3,11 @@ import ReactDOM from 'react-dom/client';
 import {IMAGE_URL_CLOUD,RESTRO_JSON} from '../constant';
 
 const resta = JSON.parse(RESTRO_JSON);
-const Restaurant = ({name,avgRating,cloudinaryImageId,cuisines}) =>{
+const Restaurant = (props) =>{
+    const {cloudinaryImageId,name,cuisines,avgRating} = props.resto;
     return(
         <>
-                <div className='card'>
+                <div className='card' key={props.key}>
                     <img alt='restroImg' src={IMAGE_URL_CLOUD+cloudinaryImageId}/>
                     <h4>{name}</h4>
                     <p>{cuisines.join(', ')}</p>
@@ -17,21 +18,20 @@ const Restaurant = ({name,avgRating,cloudinaryImageId,cuisines}) =>{
 }
 
 async function getRestourantList () {
-    const respons = await fetch('https://www.swiggy.com/dapi/restaurants/list/v5?lat=19.0759837&lng=72.8776559&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING');
-    const resJson = await respons.json();
-    console.log(resJson);
+    const respons = await fetch('https://www.swiggy.com/dapi/restaurants/list/v5?lat=16.2893144&lng=80.4604643&is-seo-homepage-enabled=true',).then( respons => respons.json()).catch(e => console.log(e));    
+    console.log(respons);
 
 }
 
 const HomePage = () => {
-        // getRestourantList();
+         getRestourantList();
     return(
         <>
             <div className='carding'>
                 {resta !== null && resta.restaurants.length > 0 &&
-                    resta.restaurants?.map( (restaurant) =>
+                    resta.restaurants?.map( (restaurant,i) =>
                         (
-                            <Restaurant {...restaurant.info}/>
+                            <Restaurant resto ={{...restaurant.info}} key={i}/>
                         )    
                     )
                 }
