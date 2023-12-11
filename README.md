@@ -4,7 +4,7 @@
 # Hooks
 1) its just a local variable
 2) don't create hook in local variable
-# react router { createBrowerRouter, RouterProvider, Outlet, Link, useReactError }
+## React Router { createBrowerRouter, RouterProvider, Outlet, Link, useReactError, useParam }
     i)how to configure them
     ii)how to handle the error explain in with Error.tsx
     iii) why we use Link component
@@ -15,8 +15,9 @@
     2)Two types of Rendering
         i)Client side 
         ii)Server side
-    3) All the childern going to the outlet
-
+    3) All the childern going to the Outlet that present in react-router-dom and that Outlet should 
+        present  in Parent
+    4)
 
 
 ### Class Based Component
